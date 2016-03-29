@@ -26,14 +26,9 @@ end
 
 group :integration do
   gem 'serverspec'
-  gem 'cucumber'
-end
-
-group :deploy do
-  gem 'stove'
 end
 
 group :production do
-  gem 'chef', '>= 12'
+  gem 'chef', '>= 11'
   gem 'berkshelf'
 end

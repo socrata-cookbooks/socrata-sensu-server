@@ -1,77 +1,47 @@
 Socrata Sensu Server Cookbook
 =============================
-[![Cookbook Version](https://img.shields.io/cookbook/v/socrata-sensu-server.svg)][cookbook]
 [![Build Status](https://img.shields.io/travis/socrata-cookbooks/socrata-sensu-server.svg)][travis]
 [![Code Climate](https://img.shields.io/codeclimate/github/socrata-cookbooks/socrata-sensu-server.svg)][codeclimate]
 [![Coverage Status](https://img.shields.io/coveralls/socrata-cookbooks/socrata-sensu-server.svg)][coveralls]
 
-[cookbook]: https://supermarket.chef.io/cookbooks/socrata-sensu-server
 [travis]: https://travis-ci.org/socrata-cookbooks/socrata-sensu-server
 [codeclimate]: https://codeclimate.com/github/socrata-cookbooks/socrata-sensu-server
 [coveralls]: https://coveralls.io/r/socrata-cookbooks/socrata-sensu-server
 
-TODO: Enter the cookbook description here.
+An opinionated wrapper cookbook for configuring a Sensu server.
 
 Requirements
 ============
 
-TODO: Describe cookbook dependencies.
+This cookbook uses `socrata-sensu` as its base which, in turn, uses `sensu`. It
+also makes use of the `uchiwa` community cookbook. It is currently tested
+against Ubuntu 14.04 only.
 
 Usage
 =====
 
-TODO: Describe how to use the cookbook.
+Add the default recipe to your run_list.
 
 Recipes
 =======
 
 ***default***
 
-TODO: Describe each component recipe.
+Installs Sensu, starts the server and API services, and installs Uchiwa.
 
 Attributes
 ==========
 
 ***default***
 
-TODO: Describe any noteworthy attributes.
-
-Resources
-=========
-
-***socrata_sensu_server***
-
-TODO: Describe each included resource.
-
-Syntax:
-
-    socrata_sensu_server 'my_resource' do
-        attribute1 'value1'
-        action :create
-    end
-
-Actions:
-
-| Action  | Description  |
-|---------|--------------|
-| action1 | Do something |
-
-Attributes:
-
-| Attribute  | Default        | Description          |
-|------------|----------------|----------------------|
-| attribute1 | `'some_value'` | Do something         |
-| action     | `:create`      | Action(s) to perform |
-
-Providers
-=========
-
-TODO: Describe each included provider
-
-***Chef::Provider::SomeProvider***
+Sets the version of Uchiwa to install. Other attributes are inherited from the
+`socrata-sensu` cookbook.
 
 Contributing
 ============
+
+Pull requests are welcome, though this cookbook is intentionally opinionated
+for our purposes. Not all PRs will be accepted.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)

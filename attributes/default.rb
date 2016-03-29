@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 #
 # Cookbook Name:: socrata-sensu-server
-# Recipe:: default
+# Attributes:: default
 #
 # Copyright 2016, Socrata, Inc.
 #
@@ -18,7 +18,4 @@
 # limitations under the License.
 #
 
-include_recipe 'socrata-sensu'
-include_recipe 'sensu::server_service'
-include_recipe 'sensu::api_service'
-include_recipe 'uchiwa'
+default['uchiwa']['version'] = '0.14.2-1'
