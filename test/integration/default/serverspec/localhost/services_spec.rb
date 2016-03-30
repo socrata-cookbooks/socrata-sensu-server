@@ -7,7 +7,7 @@ describe 'socrata-sensu-server::default::services' do
     it 'indicates all configured services are running' do
       expect(subject.exit_status).to eq(0)
     end
-    
+
     it 'indicates sensu-server is enabled' do
       expect(subject.stdout).to match(/^run: sensu-server: \(pid/)
     end

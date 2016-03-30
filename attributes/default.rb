@@ -19,3 +19,6 @@
 #
 
 default['uchiwa']['version'] = '0.14.2-1'
+
+normal['sensu']['redis']['host'] = "redis.sensu.#{node.chef_environment}" \
+                                   '.socrata.net'

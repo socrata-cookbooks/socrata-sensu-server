@@ -12,6 +12,7 @@ source_url 'https://github.com/socrata-cookbooks/socrata-sensu-server'
 issues_url 'https://github.com/socrata-cookbooks/socrata-sensu-server/issues'
 
 depends 'socrata-sensu', '~> 0.0'
+depends 'sensu', '~> 2.11'
 depends 'uchiwa', '~> 1.2'
 
 supports 'ubuntu'
