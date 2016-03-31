@@ -14,6 +14,18 @@ describe 'socrata-sensu-server::default' do
   end
   let(:chef_run) { runner.converge(described_recipe) }
 
+  it 'installs Consul' do
+    expect(chef_run).to include_recipe('consul')
+  end
+
+  it 'installs Consul Template' do
+    expect(chef_run).to include_recipe('consul-template')
+  end
+
+  it 'configures Consul Template to use Runit' do
+    expect(chef_run.node['consul_template']['init_style']).to eq('runit')
+  end
+
   it 'installs Sensu' do
     expect(chef_run).to include_recipe('sensu')
   end

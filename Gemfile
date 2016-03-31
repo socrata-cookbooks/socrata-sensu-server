@@ -31,4 +31,5 @@ end
 group :production do
   gem 'chef', '>= 11'
   gem 'berkshelf'
+  gem 'chef-sugar'
 end

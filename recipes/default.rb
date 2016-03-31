@@ -18,7 +18,13 @@
 # limitations under the License.
 #
 
-include_recipe 'socrata-sensu'
-include_recipe 'sensu::server_service'
-include_recipe 'sensu::api_service'
-include_recipe 'uchiwa'
+%w(
+  consul
+  consul-template
+  socrata-sensu
+  sensu::server_service
+  sensu::api_service
+  uchiwa
+).each do |r|
+  include_recipe r
+end

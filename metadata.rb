@@ -11,6 +11,8 @@ version '0.0.1'
 source_url 'https://github.com/socrata-cookbooks/socrata-sensu-server'
 issues_url 'https://github.com/socrata-cookbooks/socrata-sensu-server/issues'
 
+depends 'consul', '~> 2.1'
+depends 'consul-template', '~> 0.10'
 depends 'socrata-sensu', '~> 0.0'
 depends 'sensu', '~> 2.11'
 depends 'uchiwa', '~> 1.2'

@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
+default['consul_template']['init_style'] = 'runit'
+
 default['uchiwa']['version'] = '0.14.2-1'
 
 normal['sensu']['redis']['host'] = "redis.sensu.#{node.chef_environment}" \
